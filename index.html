@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS Selectors</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <header id="css-selectors"><h1>CSS Selectors</h1></header>
+        <ul>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#basic-selectors">Basic selectors</a></li>
+            <li><a class="nav-link" href="#grouping-selectors">Grouping Selectors</a></li>
+            <li><a class="nav-link" href="#combinators">Combinators</a></li>
+            <li><a class="nav-link" href="#pseudo-classes-and-pseudo-elements">Pseudo-Classes and Pseudo-Elements</a></li>
+            <li><a class="nav-link" href="#reference">Reference</a></li>
+        </ul>
+    </nav>
+
+
+    <main id="main-doc">
+
+        <section id="introduction" class="main-section">
+            <header><h2>Introduction</h2></header>
+            <p>CSS selectors define the elements to which a set of CSS rules apply.</p>
+        </section>
+
+        <section id="basic-selectors" class="main-section">
+            <header><h2>Basic selectors</h2></header>
+            <h3>Universal selector</h3>
+            <p>Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces. <ul>Syntax: <li><code>*</code></li> <li><code>ns|*</code></li> <li><<code>*|*</code></li></ul> Example: <code>*</code> will match all the elements of the document.</p>
+            <h3>Type selector</h3>
+            <p>Selects all elements that have the given node name. <ul>Syntax: <li><code>elementname</code></li></ul> Example: <code>input</code> will match any <code>&lt;input&gt;</code> element.</p>
+            <h3>Class selector</h3>
+            <p>Selects all elements that have the given class attribute. <ul>Syntax: <li><code>.classname</code></li></ul> Example: <code>.index</code> will match any element that has a class of "index".</p>
+            <h3>ID selector</h3>
+            <p>Selects an element based on the value of its id attribute. There should be only one element with a given ID in a document. <ul>Syntax: <li><code>#idname</code></li></ul> Example: <code>#toc</code> will match the element that has the ID "toc".</p>
+            <h3>Attribute selector</h3>
+            <p>Selects all elements that have the given attribute. <ul>Syntax: <li><code>[attr]</code></li><li><code>[attr=value]</code></li><li><code>[attr~=value]</code></li><li><code>[attr|=value]</code></li><li><code>[attr^=value]</code></li><li><code>[attr$=value]</code></li><li><code>[attr*=value]</code></li></ul> Example: <code>[autoplay]</code> will match all elements that have the autoplay attribute set (to any value).</p>
+        </section>
+        
+        <section id="grouping-selectors" class="main-section">
+            <header><h2>Grouping Selectors</h2></header>
+            <p>The , selector is a grouping method that selects all the matching nodes. <ul>Syntax: <li><code>A, B</code></li></ul> Example: div, span will match both &lt;span&gt; and &lt;div&gt; elements.</p>
+        </section>
+
+        <section id="combinators" class="main-section">
+            <header><h2>Combinators</h2></header>
+            <h3>Descendant combinator</h3>
+            <p>The &quot; &quot; (space) combinator selects nodes that are descendants of the first element. <ul>Syntax: <li><code>A B</code></li></ul> Example: <code>div span</code> will match all &lt;span&gt; elements that are inside a &lt;div&gt; element.</p>
+            <h3>Child combinator</h3>
+            <p>The &gt; combinator selects nodes that are direct children of the first element. <ul>Syntax: <li><code>A > B</code></li></ul> Example: <code>ul > li</code> will match all &lt;li&gt; elements that are nested directly inside a &lt;ul&gt; element.</p>
+            <h3>General sibling combinator</h3>
+            <p>The &#126; combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent. <ul>Syntax: <li><code>A ~ B</code></li></ul> Example: <code>p ~ span</code> will match all &lt;span&gt; elements that follow a &lt;p&gt;, immediately or not.</p>
+            <h3>Adjacent sibling combinator</h3>
+            <p>The + combinator matches the second element only if it immediately follows the first element. <ul>Syntax: <li><code>A + B</code></li></ul> Example: <code>h2 + p</code> will match the first &lt;p&gt; element that immediately follow an &lt;2&gt; element.</p>
+            <h3>Column combinator</h3>
+            <p>The &#124; &#124; combinator selects nodes which belong to a column. <ul>Syntax: <li><code>A || B</code></li></ul> Example: <code>col || td</code> will match all &lt;td&gt; elements that belong to the scope of the &lt;col&gt;.</p>
+        </section>
+
+        <section id="pseudo-classes-and-pseudo-elements" class="main-section">
+            <header><h2>Pseudo-Classes and Pseudo-Elements</h2></header>
+            <h3>Pseudo classes</h3>
+            <p>The &#58; pseudo allow the selection of elements based on state information that is not contained in the document tree. Example: <code>a:visited</code> will match all &lt;a&gt; elements that have been visited by the user.</p>
+            <h3>Pseudo elements</h3>
+            <p>The &#58;&#58; pseudo represent entities that are not included in HTML. Example: <code>p::first-line</code> will match the first line of all &lt;p&gt; elements.</p>
+        </section>
+
+        <section id="reference" class="main-section">
+            <header><h2>Reference</h2></header>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">https://developer.mozilla.org</a></p>
+        </section>
+    </main>
+    
+</body>
+</html>
